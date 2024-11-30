@@ -18,7 +18,9 @@ public class UserService {
 		log.info("This is info message : method start");
 		//logic to save user with db
 		log.warn("This is warn message");
+		
 		log.error("This is error message");
+		
 
 	}
 

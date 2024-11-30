@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import in.VP.SB_Logging_App.service.RepoertService;
 import in.VP.SB_Logging_App.service.UserService;
 
 @SpringBootApplication
@@ -15,6 +16,7 @@ public class SbLoggingAppApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(SbLoggingAppApplication.class, args); 
 		UserService bean = context.getBean(UserService.class);
 		bean.saveUser();
-
+		RepoertService reportService = context.getBean(RepoertService.class);
+		reportService.generateReport();
 }
 }
